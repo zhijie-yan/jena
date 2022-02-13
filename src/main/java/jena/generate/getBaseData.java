@@ -13,42 +13,64 @@ import java.util.Scanner;
 
 public class getBaseData {
 
-    public static HashMap<String,Integer> name2id = new HashMap<>();
-    public static HashMap<Integer,String> id2name = new HashMap<>();
-    public static HashMap<Integer,Entry> id2entry = new HashMap<>();
+    public HashMap<String,Integer> name2id;
+    public HashMap<Integer,String> id2name;
+    public HashMap<Integer, Entity> id2entry;
 
+    public HashMap<Integer, Integer> dictRel;
+    public HashMap<Integer, Integer> hypernymRel;
+    public HashMap<Integer, Integer> hyponymsRel;
+    public LinkedList<Entity> jsonData;
 
-    private static String pathJson = "src/main/resources/water/水利大辞典-定义-整理数据.json";
-    private static String pathHypernym = "src/main/resources/water/hypernym.csv";
-    private static String pathHyponyms = "src/main/resources/water/hyponyms.csv";
-    private static String pathDictHyponyms = "src/main/resources/water/dictHyponyms.csv";
-    private static String pathSortWords = "src/main/resources/water/sortWord.csv";
+    public LinkedList<Integer> sortWords;
+    public LinkedList<Integer> orgData;
+    public LinkedList<Integer> perData;
+    public LinkedList<Integer> termData;
 
+    private String pathJson = "src/main/resources/water/水利大辞典-定义-整理数据.json";
+    private String pathHypernym = "src/main/resources/water/hypernym.csv";
+    private String pathHyponyms = "src/main/resources/water/hyponyms.csv";
+    private String pathDictHyponyms = "src/main/resources/water/dictHyponyms.csv";
+    private String pathSortWords = "src/main/resources/water/sortWord.csv";
+
+    private String pathOrg = "src/main/resources/water/水利科技.csv";
+    private String pathPer = "src/main/resources/water/水利史.csv";
+    private String pathTerm = "src/main/resources/water/terms.csv";
 
     public getBaseData() throws IOException {
-        LinkedList<Entry> jsonData = getJsonData(pathJson);
+        name2id = new HashMap<>();
+        id2name = new HashMap<>();
+        id2entry = new HashMap<>();
+        jsonData = getJsonData(pathJson);
+        sortWords = getSignalWord(pathSortWords);
+        orgData = getSignalWord(pathOrg);
+        perData = getSignalWord(pathPer);
+        termData = getSignalWord(pathTerm);
+        dictRel = getCsvRelationships(pathDictHyponyms);
+        hypernymRel = getCsvRelationships(pathHypernym);
+        hyponymsRel = getCsvRelationships(pathHyponyms);
     }
 
-    public static LinkedList<Integer> getSortWord(String pathName){
-        LinkedList<Integer> sortArr = new LinkedList<>();
+    public LinkedList<Integer> getSignalWord(String pathName){
+        LinkedList<Integer> signalArr = new LinkedList<>();
         // 创建scanner
         try (Scanner scanner = new Scanner(Paths.get(pathName).toFile())) {
             while (scanner.hasNext()) {
                 String str = scanner.next();
                 int idNum = Integer.parseInt(str);
-                sortArr.add(idNum);
+                signalArr.add(idNum);
             }
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-        return sortArr;
+        return signalArr;
     }
 
     /**
      * 读取关系
      * @return 一个关系的hashMap
      */
-    public static HashMap<Integer, Integer> getCsvRelationships(String pathName){
+    public HashMap<Integer, Integer> getCsvRelationships(String pathName){
         HashMap<Integer,Integer> relations = new HashMap<>();
         // 创建scanner
         try (Scanner scanner = new Scanner(Paths.get(pathName).toFile())) {
@@ -76,20 +98,20 @@ public class getBaseData {
      * 1.id和name的互相映射，两个map
      * 2.id和json词条的map映射，可以根据id找到entry对象
      */
-    public static LinkedList<Entry> getJsonData(String pathname) throws IOException {
+    public LinkedList<Entity> getJsonData(String pathname) throws IOException {
         File file=new File(pathname);
         JsonValue jsonArr = readerMethod(file);
         JsonArray asArray = jsonArr.getAsArray();
-        LinkedList<Entry> jsonData = new LinkedList<>();
+        LinkedList<Entity> jsonData = new LinkedList<>();
         // 必要参数获取
         for(int i=0;i<asArray.size();i++){
-            Entry newEntry = transforClass(asArray.get(i).toString());
-            jsonData.add(newEntry);
-            Integer id = newEntry.getId();
-            String name = newEntry.getName();
+            Entity newEntity = transforClass(asArray.get(i).toString());
+            jsonData.add(newEntity);
+            Integer id = newEntity.getId();
+            String name = newEntity.getName();
             id2name.put(id,name);
             name2id.put(name,id);
-            id2entry.put(id,newEntry);
+            id2entry.put(id, newEntity);
         }
         return jsonData;
     }
@@ -98,7 +120,7 @@ public class getBaseData {
      * 读取json数据
      * @return 列表形式的json结果
      */
-    private static JsonValue readerMethod(File file) throws IOException {
+    private JsonValue readerMethod(File file) throws IOException {
         FileReader fileReader = new FileReader(file);
         Reader reader = new InputStreamReader(new FileInputStream(file), "Utf-8");
         int ch = 0;
@@ -115,10 +137,11 @@ public class getBaseData {
     /**
      * 将json字符串形式数据解析成entry对象
      */
-    private static Entry transforClass(String jsonStr){
+    private Entity transforClass(String jsonStr){
         //JSON-LIB
         JSONObject jsonResult = JSONObject.fromObject(jsonStr);
-        Entry entry = (Entry) JSONObject.toBean(jsonResult, Entry.class);
-        return entry;
+        Entity entity = (Entity) JSONObject.toBean(jsonResult, Entity.class);
+        return entity;
     }
+
 }

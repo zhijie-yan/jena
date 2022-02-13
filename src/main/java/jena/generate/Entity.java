@@ -2,7 +2,7 @@ package jena.generate;
 
 import java.util.Arrays;
 
-public class Entry {
+public class Entity {
     private int id;
     private String name;
 
