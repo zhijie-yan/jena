@@ -30,12 +30,12 @@ public class generateOWL {
             str2Class.put(entity.getName(),m.createClass(exNs + entity.getName()));
         }
         // 设置类的继承关系
-        setSubClass(baseData,str2Class,baseData.hypernymRel);
-        setSubClass(baseData,str2Class,baseData.hyponymsRel);
+        setSubClass(baseData.hypernymRel);
+        setSubClass(baseData.hyponymsRel);
 //        setSubClass(baseData,str2Class,baseData.dictRel);
         // 设置实例
         setIndividual(baseData.orgData,"组织机构");
-        setIndividual(baseData.perData,"水利史");
+        setIndividual(baseData.perData,"人员");
         setIndividual(baseData.termData,"水利术语");
         // 写出
         wirteRdf();
@@ -53,9 +53,9 @@ public class generateOWL {
         m.write( System.out,"RDF/XML");
     }
 
-    private static void setIndividual(LinkedList<Integer> data, String className) {
-        for (Integer id:data){
-            String name = baseData.id2name.get(id);
+    private static void setIndividual(LinkedList<String> data, String className) {
+        for (String name:data){
+//            String name = baseData.id2name.get(id);
             if (!str2Class.containsKey(className)){
                 str2Class.put(className,m.createClass(exNs + className));
             }
@@ -64,7 +64,7 @@ public class generateOWL {
     }
 
 
-    private static void setSubClass(getBaseData baseData,HashMap<String, OntClass> str2Class,HashMap<Integer, Integer> rel) {
+    private static void setSubClass(HashMap<Integer, Integer> rel) {
         for (Map.Entry<Integer, Integer> entry:rel.entrySet()){
             String startName = baseData.id2name.get(entry.getKey());
             String endName = baseData.id2name.get(entry.getKey());

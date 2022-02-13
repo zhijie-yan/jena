@@ -22,20 +22,20 @@ public class getBaseData {
     public HashMap<Integer, Integer> hyponymsRel;
     public LinkedList<Entity> jsonData;
 
-    public LinkedList<Integer> sortWords;
-    public LinkedList<Integer> orgData;
-    public LinkedList<Integer> perData;
-    public LinkedList<Integer> termData;
+    public LinkedList<String> sortWords;
+    public LinkedList<String> orgData;
+    public LinkedList<String> perData;
+    public LinkedList<String> termData;
 
     private String pathJson = "src/main/resources/water/水利大辞典-定义-整理数据.json";
     private String pathHypernym = "src/main/resources/water/hypernym.csv";
     private String pathHyponyms = "src/main/resources/water/hyponyms.csv";
     private String pathDictHyponyms = "src/main/resources/water/dictHyponyms.csv";
-    private String pathSortWords = "src/main/resources/water/sortWord.csv";
+    private String pathSortWords = "src/main/resources/water/排序词条.csv";
 
-    private String pathOrg = "src/main/resources/water/水利科技.csv";
-    private String pathPer = "src/main/resources/water/水利史.csv";
-    private String pathTerm = "src/main/resources/water/terms.csv";
+    private String pathOrg = "src/main/resources/individual/水利科技-组织机构.csv";
+    private String pathPer = "src/main/resources/individual/水利史-人名.csv";
+    private String pathTerm = "src/main/resources/individual/terms.csv";
 
     public getBaseData() throws IOException {
         name2id = new HashMap<>();
@@ -51,14 +51,14 @@ public class getBaseData {
         hyponymsRel = getCsvRelationships(pathHyponyms);
     }
 
-    public LinkedList<Integer> getSignalWord(String pathName){
-        LinkedList<Integer> signalArr = new LinkedList<>();
+    public LinkedList<String> getSignalWord(String pathName){
+        LinkedList<String> signalArr = new LinkedList<>();
         // 创建scanner
         try (Scanner scanner = new Scanner(Paths.get(pathName).toFile())) {
             while (scanner.hasNext()) {
                 String str = scanner.next();
-                int idNum = Integer.parseInt(str);
-                signalArr.add(idNum);
+//                int idNum = Integer.parseInt(str);
+                signalArr.add(str);
             }
         } catch (IOException ex) {
             ex.printStackTrace();
