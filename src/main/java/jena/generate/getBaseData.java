@@ -1,6 +1,7 @@
 package jena.generate;
 
 import net.sf.json.JSONObject;
+import org.apache.http.entity.StringEntity;
 import org.apache.jena.atlas.json.JSON;
 import org.apache.jena.atlas.json.JsonArray;
 import org.apache.jena.atlas.json.JsonValue;
@@ -20,7 +21,7 @@ public class getBaseData {
     public HashMap<Integer, Integer> dictRel;
     public HashMap<Integer, Integer> hypernymRel;
     public HashMap<Integer, Integer> hyponymsRel;
-    public LinkedList<Entity> jsonData;
+    public HashMap<String,Entity> jsonData;
 
     public LinkedList<String> sortWords;
     public LinkedList<String> orgData;
@@ -98,17 +99,17 @@ public class getBaseData {
      * 1.id和name的互相映射，两个map
      * 2.id和json词条的map映射，可以根据id找到entry对象
      */
-    public LinkedList<Entity> getJsonData(String pathname) throws IOException {
+    public HashMap<String,Entity> getJsonData(String pathname) throws IOException {
         File file=new File(pathname);
         JsonValue jsonArr = readerMethod(file);
         JsonArray asArray = jsonArr.getAsArray();
-        LinkedList<Entity> jsonData = new LinkedList<>();
+        HashMap<String,Entity> jsonData = new HashMap<>();
         // 必要参数获取
         for(int i=0;i<asArray.size();i++){
             Entity newEntity = transforClass(asArray.get(i).toString());
-            jsonData.add(newEntity);
             Integer id = newEntity.getId();
             String name = newEntity.getName();
+            jsonData.put(name,newEntity);
             id2name.put(id,name);
             name2id.put(name,id);
             id2entry.put(id, newEntity);

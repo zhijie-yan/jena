@@ -1,14 +1,15 @@
 package jena.generate;
 
-import org.apache.jena.ontology.Individual;
-import org.apache.jena.ontology.OntClass;
-import org.apache.jena.ontology.OntModel;
-import org.apache.jena.ontology.OntModelSpec;
+import org.apache.jena.ontology.*;
+import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.vocabulary.RDF;
+import org.apache.jena.vocabulary.RDFS;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
 
@@ -22,21 +23,39 @@ public class generateOWL {
     public static HashMap<String, OntClass> str2Class = new HashMap<>();
     // 实例
     public static HashMap<String, Individual> str2Individual = new HashMap<>();
+    // 已经被创建的类id集合
+//    public static HashSet<String> createdNames = new HashSet<>();
 
     public static void main(String[] args) throws IOException {
         baseData = new getBaseData();
-        // 生成类
-        for (Entity entity :baseData.jsonData){
-            str2Class.put(entity.getName(),m.createClass(exNs + entity.getName()));
+        // 生成类 设置词条对应的解释 别名
+        ObjectProperty hasAlias = m.createObjectProperty(exNs+"hasAlias");
+
+        int start = 0;
+        int end = 500;
+        for(int i=start;i<end;i++){
+            String name = baseData.sortWords.get(i);
+            str2Class.put(name,m.createClass(exNs + name));
+            str2Class.get(name).addLabel(baseData.jsonData.get(name).getContext(),"注释");
+            for(String alias : baseData.jsonData.get(name).getAlias()){
+                str2Class.get(name).addLabel(alias,"亦称");
+            }
+
         }
+
+//        for (Entity entity :baseData.jsonData){
+//            String name = entity.getName();
+//            str2Class.put(name,m.createClass(exNs + name));
+//        }
         // 设置类的继承关系
         setSubClass(baseData.hypernymRel);
         setSubClass(baseData.hyponymsRel);
-//        setSubClass(baseData,str2Class,baseData.dictRel);
+        setSubClass(baseData.dictRel);
         // 设置实例
         setIndividual(baseData.orgData,"组织机构");
         setIndividual(baseData.perData,"人员");
         setIndividual(baseData.termData,"水利术语");
+//        m.add(m.createResource(exNs+"测试"), hasAlias,"啥属性");
         // 写出
         wirteRdf();
     }
@@ -49,7 +68,7 @@ public class generateOWL {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-//        m.write(fwriter);
+        m.write(fwriter);
         m.write( System.out,"RDF/XML");
     }
 
@@ -67,8 +86,10 @@ public class generateOWL {
     private static void setSubClass(HashMap<Integer, Integer> rel) {
         for (Map.Entry<Integer, Integer> entry:rel.entrySet()){
             String startName = baseData.id2name.get(entry.getKey());
-            String endName = baseData.id2name.get(entry.getKey());
-            str2Class.get(startName).addSubClass(str2Class.get(endName));
+            String endName = baseData.id2name.get(entry.getValue());
+            if(str2Class.containsKey(startName) && str2Class.containsKey(endName)){
+                str2Class.get(startName).addSubClass(str2Class.get(endName));
+            }
         }
     }
 }
