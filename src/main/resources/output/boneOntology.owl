@@ -1,0 +1,846 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#"
+     xml:base="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl">
+        <dc:creator>zjyan</dc:creator>
+        <dc:title>水利本体</dc:title>
+        <rdfs:comment>构建的水利本体</rdfs:comment>
+        <owl:versionInfo>v1.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#位于 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#位于">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#大坝"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水电站"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#湖泊"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#组织"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地区"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#作者 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#作者">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#人物"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利文献"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#包含 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#包含">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流域"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#发源于 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#发源于">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地区"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#存储 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#存储">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水库"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#蓄水池"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#湖泊"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#所在河流 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#所在河流">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#大坝"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水渠"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水闸"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流入 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流入">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#湖泊"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水库"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#蓄水池"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流经地区 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流经地区">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地区"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#相接 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#相接">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#湖泊"/>
+        <rdfs:label>连接</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#被分散成 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#被分散成">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地表水"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水渠"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#隶属于 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#隶属于">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#人物"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#组织"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#上升流 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#上升流">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地表水"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+        <rdfs:label>涌升流</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#井 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#井">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#人造涌升流"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#人物 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#人物">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利史"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#作者"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利文献"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#隶属于"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#组织"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#人造涌升流 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#人造涌升流">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#上升流"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#内陆水 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#内陆水">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水域"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#农业水利 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#农业水利">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利水电工程"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>水利大辞典</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#区划 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#区划">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#直辖市"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#县 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#县">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#市"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#合流 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#合流">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水文特征"/>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#咸水 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#咸水">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水域"/>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#喷泉 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#喷泉">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#人造涌升流"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地下水 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地下水">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#内陆水"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地区 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地区">
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>智源水利数据集</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地表水 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地表水">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#内陆水"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#城市水利 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#城市水利">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利水电工程"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>水利大辞典</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#城河 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#城河">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水文化"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#大坝 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#大坝">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#防洪抗旱"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#位于"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地区"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#所在河流"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>智源水利数据集</dc:source>
+        <dc:source>水利大辞典</dc:source>
+        <rdfs:label>水坝</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#大气水 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#大气水">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水域"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>张佩, 贾振兴, 郑秀清,等. 关于水利本体构建的思考[J]. 水电能源科学, 2014, 032(004):163-166.</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#市 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#市">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#省份"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利信息化 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利信息化">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利科学"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>水利大辞典</dc:source>
+        <rdfs:comment>相关系统信息</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利史 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利史">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利科学"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>水利大辞典</dc:source>
+        <rdfs:comment>主要是识别水利相关人员</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利政务信息 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利政务信息">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利信息化"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利文献 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利文献">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利科技"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利术语 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利术语">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利信息化"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利水电工程 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利水电工程">
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>水利大辞典</dc:source>
+        <rdfs:comment>利用水力资源的人造工程</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利科学 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利科学">
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>水利大辞典</dc:source>
+        <rdfs:comment>组织机构</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利科技 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利科技">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利科学"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>水利大辞典</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利风景区 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利风景区">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水文化"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水力发电 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水力发电">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利水电工程"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>水利大辞典</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水域 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水域">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水资源"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水库 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水库">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>水利大辞典</dc:source>
+        <dc:source>百度百科</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水文化 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水文化">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利科学"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水文特征 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水文特征">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水资源"/>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水渠 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水渠">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#防洪抗旱"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水生态信息 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水生态信息">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利信息化"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水电站 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水电站">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水力发电"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#位于"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地区"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#所在河流"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>智源水利数据集</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水系 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水系">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地表水"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>百度百科</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水资源 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水资源">
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+        <dc:source>水利大辞典</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水闸 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水闸">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#防洪抗旱"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>百度百科</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#汇入点 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#汇入点">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水文特征"/>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水系"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#存储"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水库"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流经地区"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地区"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#相接"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#湖泊"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#发源于"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地区"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>智源数据
+SUMO</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流源头 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流源头">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#自然涌升流"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#泉水 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#泉水">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#自然涌升流"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流域 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流域">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水文特征"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#包含"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#海域 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#海域">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#咸水"/>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#淡水 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#淡水">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水域"/>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#湖泊 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#湖泊">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水系"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#内陆水"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地下水"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地表水"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#位于"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地区"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#被分散成"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水渠"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+        <dc:source>SUMO</dc:source>
+        <dc:source>百度百科</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#湿地 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#湿地">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#自然涌升流"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#盐池 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#盐池">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#咸水"/>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#盐泉 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#盐泉">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#咸水"/>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#盐泻湖 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#盐泻湖">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#咸水"/>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#盐湖 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#盐湖">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#咸水"/>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#直辖市 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#直辖市">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地区"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#省份 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#省份">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地区"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#组织 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#组织">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利科技"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#自然涌升流 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#自然涌升流">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#上升流"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>Ontology Engineer ingGroup</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#蓄水池 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#蓄水池">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#大坝"/>
+        <dc:creator>zjyan</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#防洪抗旱 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#防洪抗旱">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利水电工程"/>
+        <dc:creator>zjyan</dc:creator>
+        <dc:source>水利大辞典</dc:source>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
