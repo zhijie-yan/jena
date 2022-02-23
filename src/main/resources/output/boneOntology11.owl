@@ -13,6 +13,9 @@
   </owl:Ontology>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#冰川">
     <rdfs:label xml:lang="注释">极地或高山地区长期存在的沿地面倾斜方向运动的天然巨大冰体。为多年积聚起来的雪，在重力巨大压力下，逐渐演变而成。现代冰川覆盖的总面积约1630万km2，占地球陆地总面积的11%。中国现代冰川和永久积雪区覆盖面积约为56500km2，多分布在西北和西南高山地区。冰川运动速度一般每年为几米到几十米。按气候条件，分大陆性冰川和季风海洋性冰川两大类。前者在大陆性气候条件下发育，具有降水少、雪线高、消融弱、冰川运动速度慢的特点;后者在季风海洋性气候条件下形成，有气候温和、降水多、消融强烈、冰川运动速度较快的特点。按其所处位置，分大陆冰川和高山冰川等。</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水域"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#泉水">
     <dc:source>Ontology Engineer ingGroup</dc:source>
@@ -22,16 +25,22 @@
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#暴雨">
+    <rdfs:label xml:lang="注释">势急量大的降雨。中国气象部门规定暴雨为：　(1)　1小时内的雨量等于和大于16mm的雨;(2) 12小时雨量等于和大于30mm的雨;(3)　24小时雨量等于和大于50mm的雨。按雨强又分一般暴雨、大暴雨和特大暴雨。各地标准不一，一般认为12小时雨量等于和大于70mm，或24小时雨量等于和大于100mm者称“大暴雨”;12小时雨量等于和大于140mm，或24小时雨量等于和大于200mm者称“特大暴雨”。中国暴雨主要出现在夏季，南方地区春季和秋季也有出现，主要由低气压的发展、长时间的锋面活动、强烈雷雨、台风影响造成。地形也可能促使暴雨的形成。</rdfs:label>
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#雷雨"/>
     </rdfs:subClassOf>
-    <rdfs:label xml:lang="注释">势急量大的降雨。中国气象部门规定暴雨为：　(1)　1小时内的雨量等于和大于16mm的雨;(2) 12小时雨量等于和大于30mm的雨;(3)　24小时雨量等于和大于50mm的雨。按雨强又分一般暴雨、大暴雨和特大暴雨。各地标准不一，一般认为12小时雨量等于和大于70mm，或24小时雨量等于和大于100mm者称“大暴雨”;12小时雨量等于和大于140mm，或24小时雨量等于和大于200mm者称“特大暴雨”。中国暴雨主要出现在夏季，南方地区春季和秋季也有出现，主要由低气压的发展、长时间的锋面活动、强烈雷雨、台风影响造成。地形也可能促使暴雨的形成。</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#大气水"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水能">
-    <rdfs:label xml:lang="亦称">water energy</rdfs:label>
     <rdfs:label xml:lang="注释">陆地和沿海水体中蕴藏的天然水能源。水电站生产电能所必需的一种不污染环境又可再生的一次能源。主要包括河川水能资源和沿海潮汐水能资源。是水利资源的重要组成部分。河川径流相对于海平面具有一定的势能，在其流动过程中又有部分势能转化为动能，这种势能和动能即构成河川天然水能。潮汐水能主要是由日、月、天体引潮力和太阳辐射等作用所形成的潮差而成。天然水能在被开发利用前，常被水流消耗于克服流动阻力、冲蚀河床或海岸、挟带运送泥沙和漂浮物等，使所含水能分散地消耗掉。水力发电的任务，就是要通过一系列工程措施，利用水能生产电能。
         
         </rdfs:label>
+    <rdfs:label xml:lang="亦称">water energy</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水力发电"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#市">
     <rdfs:subClassOf>
@@ -40,12 +49,18 @@
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#雪">
     <rdfs:label xml:lang="注释">固体降水的最普遍的形式。高空云层中的水汽冷却凝华成冰晶，逐渐增大而形成。雪为白色结晶体，由于云中所含水汽量和温度不同，所形成的雪的形状有片状、星状、针状、枝状和柱状等;气温不很冷时，雪在下降过程中会互相黏合，形成雪团。冬季，在中、高纬度地区，地面和近地层的温度低于0℃，降落到地面的雪能堆积成积雪。冬季积雪多的地方，春天融雪时形成春汛。</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#大气水"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水泵">
-    <rdfs:label xml:lang="亦称">water pump</rdfs:label>
     <rdfs:label xml:lang="注释">由动力机带动，将水从一个地方输送到另一个地方，从低处扬至高处，或者使水流的压力增加的机械。可分为叶片泵、容积泵和其他类型泵。叶片泵是利用叶片的旋转运动，将能量传递给流经其内部的水体，使水的能量增加，主要分为离心泵、轴流泵和混流泵三种。容积泵是利用工作室容积的周期性变化，将能量传递给流经其内部的水体，使水的能量增加，可分为往复泵和旋转泵两种。前者利用柱塞在泵缸内作往复运动来改变工作室的容积，如往复式活塞泵;后者利用转子作回转运动改变工作室的容积，如齿轮泵、螺杆泵。其他类型泵有射流泵、水轮泵、水锤泵、气升泵等，它们利用液流或气流的运动将本身的能量传递给被输送的液体。广泛应用于灌溉、排涝、工矿企业与城镇的给排水等方面。
         
         </rdfs:label>
+    <rdfs:label xml:lang="亦称">water pump</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#农业水利"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流">
     <rdfs:label xml:lang="注释">陆地表面上接纳地面径流和地下径流的天然的固定延伸泄水凹槽。河水沿着其经常性地或周期性地流向海洋、湖泊或另一河流。按大小和性质，分江、河、溪、沟等。河流的补给主要有雨水、冰雪融水和地下水。一条河流通常分河源、上游、中游、下游、河口等区段。干旱地区有些河流，最后没于沙漠，称“瞎尾河”。石灰岩地区有些河流经溶洞或裂隙没入地下，成为地下河流，称“暗河”或“伏流”。</rdfs:label>
@@ -103,10 +118,13 @@ SUMO</dc:source>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#土坝">
-    <rdfs:label xml:lang="亦称">earth dam</rdfs:label>
     <rdfs:label xml:lang="注释">全部或大部分由土料填筑而成的坝。按结构形式，分均质坝、心墙坝、斜墙坝、土石混合坝等。坝型选择需视筑坝材料的来源、分布、储量和施工条件而定。按不同施工方法，分碾压式、水力冲填式、水中倒土式和定向爆破式等。由于筑坝材料可就地取用，且施工方法简单，既可采用机械化施工又可采用人力施工，故常被广泛采用。
         
         </rdfs:label>
+    <rdfs:label xml:lang="亦称">earth dam</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#防洪抗旱"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#自然涌升流">
     <dc:source>Ontology Engineer ingGroup</dc:source>
@@ -124,24 +142,24 @@ SUMO</dc:source>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流速">
+    <rdfs:label xml:lang="注释">单位时间内流体运动的长度。常用的单位为m/s或cm/s。在河道中，流速可用仪器或浮标直接测定。在实验室中，常用皮托管、微型流速仪、激光、同位素等方法测速。用仪器测得的流速实际上都是短时间内的平均速度。过水断面上各点的流速一般是不同的，用仪器测定流速，仅限于断面上若干个测点的速度。根据过水断面测得的若干测点的流速，可算出断面平均流速。</rdfs:label>
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流量"/>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流速仪"/>
     </rdfs:subClassOf>
-    <rdfs:label xml:lang="注释">单位时间内流体运动的长度。常用的单位为m/s或cm/s。在河道中，流速可用仪器或浮标直接测定。在实验室中，常用皮托管、微型流速仪、激光、同位素等方法测速。用仪器测得的流速实际上都是短时间内的平均速度。过水断面上各点的流速一般是不同的，用仪器测定流速，仅限于断面上若干个测点的速度。根据过水断面测得的若干测点的流速，可算出断面平均流速。</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#堤">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#海塘"/>
-    </rdfs:subClassOf>
-    <rdfs:label xml:lang="亦称"> dike</rdfs:label>
-    <rdfs:label xml:lang="亦称"> levee</rdfs:label>
-    <rdfs:label xml:lang="亦称">embankment</rdfs:label>
     <rdfs:label xml:lang="注释">亦称“堤防”。沿着江、河、湖、海岸边修筑的防水建筑物。用以约束水流、防止洪水泛滥或潮、浪侵袭，并有稳定河槽、导引水流增加宣泄能力的作用。按所在位置及工作条件不同，主要有江(河)堤、湖堤、海堤(或海塘)和减少水库淹没的库堤等。堤名称繁多，有大堤(或干堤)、子堤、戗堤、遥堤、缕堤、格堤、月堤、越堤、圈堤、套堤、撑堤、翼堤、贴堤、隔堤等。修筑堤防时，堤线位置要根据水流条件、地形、土质情况，以及经济性合理布设;根据防洪、防潮标准确定堤顶高程、堤距(两岸堤线间距离)和堤断面(垂直堤线的横断面)尺寸等。堤的施工要严格控制质量，如清理地基、选择土料，并做到层填层夯。在易受冲刷和重要地段，临水面可用块石或混凝土修筑。平时应注意岁修养护，汛期要做好防汛工作。
         
         </rdfs:label>
+    <rdfs:label xml:lang="亦称">embankment</rdfs:label>
+    <rdfs:label xml:lang="亦称"> levee</rdfs:label>
+    <rdfs:label xml:lang="亦称"> dike</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#海塘"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水文化">
     <rdfs:subClassOf>
@@ -154,10 +172,10 @@ SUMO</dc:source>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河床">
+    <rdfs:label xml:lang="注释">即“河槽”。多用于地貌学。</rdfs:label>
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#落差"/>
     </rdfs:subClassOf>
-    <rdfs:label xml:lang="注释">即“河槽”。多用于地貌学。</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利术语">
     <rdfs:subClassOf>
@@ -179,12 +197,12 @@ SUMO</dc:source>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河槽">
+    <rdfs:label xml:lang="注释">亦称“河床”。河谷中被水流淹没的部分。随水位涨落而变化。其形态受地形、地质、土壤、水流冲刷、搬运和泥沙堆积的影响。分平原河槽和山区河槽两类。在平原河槽中，一般将枯水期水流经过的河槽称“枯水河槽”，亦称“基本河槽”或“主河槽”;洪水期水流漫溢到两岸滩地上，形成很宽的河槽，称“洪水河槽”。山区河槽比降大、水流急，枯水期形态一般比较稳定;洪水期河流中常携带大量推移物质，在支流和小溪河口附近沉积成冲积扇，或在河弯段沉积，成为河槽的一部分。
+</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河床"/>
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地面径流"/>
     </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河床"/>
-    <rdfs:label xml:lang="注释">亦称“河床”。河谷中被水流淹没的部分。随水位涨落而变化。其形态受地形、地质、土壤、水流冲刷、搬运和泥沙堆积的影响。分平原河槽和山区河槽两类。在平原河槽中，一般将枯水期水流经过的河槽称“枯水河槽”，亦称“基本河槽”或“主河槽”;洪水期水流漫溢到两岸滩地上，形成很宽的河槽，称“洪水河槽”。山区河槽比降大、水流急，枯水期形态一般比较稳定;洪水期河流中常携带大量推移物质，在支流和小溪河口附近沉积成冲积扇，或在河弯段沉积，成为河槽的一部分。
-</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水文特征">
     <dc:source>Ontology Engineer ingGroup</dc:source>
@@ -193,11 +211,14 @@ SUMO</dc:source>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#雨量器">
+    <rdfs:label xml:lang="注释">亦称“雨量筒”。测定雨量的仪器。外壳为金属圆筒，分上下两节。上节承接雨水，底部为一漏斗(漏斗伸入贮水瓶内)，筒口直径一般为20cm;下节放贮水瓶，以收集雨水。安置时器口应保持水平，一般离地面70cm。(也有将器口与地面齐平)。降雨后将贮水瓶中的雨水倾倒入特制的量雨杯以读得雨量的数值。
+</rdfs:label>
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#雨量"/>
     </rdfs:subClassOf>
-    <rdfs:label xml:lang="注释">亦称“雨量筒”。测定雨量的仪器。外壳为金属圆筒，分上下两节。上节承接雨水，底部为一漏斗(漏斗伸入贮水瓶内)，筒口直径一般为20cm;下节放贮水瓶，以收集雨水。安置时器口应保持水平，一般离地面70cm。(也有将器口与地面齐平)。降雨后将贮水瓶中的雨水倾倒入特制的量雨杯以读得雨量的数值。
-</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#降水"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水系">
     <dc:source>百度百科</dc:source>
@@ -208,6 +229,7 @@ SUMO</dc:source>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地面径流">
     <rdfs:label xml:lang="注释">降水扣除蒸发、截留、下渗、填洼后，从流域坡面流入河槽的水流。</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#盐湖">
     <dc:source>Ontology Engineer ingGroup</dc:source>
@@ -216,32 +238,35 @@ SUMO</dc:source>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水位">
+    <rdfs:label xml:lang="注释">江、河、湖、海的自由水面和地下水的自由水面相对于基准面的高程。在中国，单位为m。将水尺观测读数折算成基准面上的高程或直接测量可求得水位;也可由自记水位计记录测定水位。根据观测资料整理出的水位过程线，可求出日、月、年或多年期间的最高水位、最低水位、平均水位等。将上、下游邻近站同时水位差(即落差)除以两站间距，可求得两站间河段的平均水面纵比降。</rdfs:label>
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水尺"/>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#春汛"/>
     </rdfs:subClassOf>
-    <rdfs:label xml:lang="注释">江、河、湖、海的自由水面和地下水的自由水面相对于基准面的高程。在中国，单位为m。将水尺观测读数折算成基准面上的高程或直接测量可求得水位;也可由自记水位计记录测定水位。根据观测资料整理出的水位过程线，可求出日、月、年或多年期间的最高水位、最低水位、平均水位等。将上、下游邻近站同时水位差(即落差)除以两站间距，可求得两站间河段的平均水面纵比降。</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#台风雨">
+    <rdfs:label xml:lang="注释">热带海洋上的风暴(台风)带来的降雨。这种风暴由异常强大的海洋湿热气团组成，它来时不但有狂风，而且有暴雨。发生台风时，一次暴雨过程常可达200〖KG-1.3mm〗～300mm，甚至超过1000mm。中国东南沿海浙江、福建、台湾、广东、广西等地夏秋之间的台风雨占年雨量的20%〖KG-1.3mm〗～30%，长江以北沿海各地仅占10%，稍入内陆则不足5%。台风雨在各种雨量中所占比重虽小，但雨势骤急，易造成特大洪水，威胁生命财产和水利工程安全。</rdfs:label>
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#降水"/>
     </rdfs:subClassOf>
-    <rdfs:label xml:lang="注释">热带海洋上的风暴(台风)带来的降雨。这种风暴由异常强大的海洋湿热气团组成，它来时不但有狂风，而且有暴雨。发生台风时，一次暴雨过程常可达200〖KG-1.3mm〗～300mm，甚至超过1000mm。中国东南沿海浙江、福建、台湾、广东、广西等地夏秋之间的台风雨占年雨量的20%〖KG-1.3mm〗～30%，长江以北沿海各地仅占10%，稍入内陆则不足5%。台风雨在各种雨量中所占比重虽小，但雨势骤急，易造成特大洪水，威胁生命财产和水利工程安全。</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流速仪">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流速"/>
     <rdfs:label xml:lang="注释">测量水流速度的仪器。常用的有旋杯式和旋桨式两种。旋杯或旋桨在水流冲击力作用下旋转，转速快慢与水流速度有关。根据公式V=a+b(N/t)，由测得的旋杯或旋桨的旋转数计算出流速V。式中V为流速，t为测速历时，N为时段t内旋杯或旋桨的转数，系数a和b须经检测率定。施测时，用悬杆或钢索悬吊流速仪沉入水面以下测速点的位置，为防流速仪因水流冲击而漂移，需在流速仪下面悬挂重物——铅鱼。
 </rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流量"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流速"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水轮机">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#尾水管"/>
-    </rdfs:subClassOf>
-    <rdfs:label xml:lang="亦称">hydraulic turbine</rdfs:label>
     <rdfs:label xml:lang="注释">利用水流的势能和动能作原动力，使转轮转动的机械。是水电站的主要动力设备之一。主要部件有引水室、导水机构、转轮、尾水管、主轴和轴承等。工作时，转轮将水流能量转换成旋转机械能，并通过主轴，驱动发电机转子旋转。按工作原理和结构特征，分冲击式和反击式两大类。前者将水流能量转换成射流水柱的动能驱动水轮机;后者利用水流的势能和动能驱动水轮机。根据转轮中水流流动形式、转轮构造特征或水流作用在转轮上的方向等条件，这两类水轮机可分成下列各种形式： 
 </rdfs:label>
+    <rdfs:label xml:lang="亦称">hydraulic turbine</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水电站"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#井">
     <dc:source>Ontology Engineer ingGroup</dc:source>
@@ -265,10 +290,13 @@ SUMO</dc:source>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#防渗体">
-    <rdfs:label xml:lang="亦称">anti-seepage</rdfs:label>
     <rdfs:label xml:lang="注释">水工建筑物中防止和减小水流渗透的部分。作用主要是减少渗漏损失，加长渗流路径，降低渗透压力，保证坝体防渗安全。通常用防水性能优良的材料筑成，如黏土、水泥、混凝土、钢筋混凝土、沥青等。按结构形式，分心墙、斜墙、斜心墙、齿墙、板桩、铺盖、截水槽、防渗墙、防渗帷幕等。不同的挡水建筑物采用的结构形式亦不同，如混凝土坝坝基采用防渗帷幕，土坝、堆石坝和土石混合坝采用心墙(或斜墙、斜心墙)、截水槽(或防渗墙)加防渗帷幕，水闸采用铺盖和板桩(或齿墙)等。
         
         </rdfs:label>
+    <rdfs:label xml:lang="亦称">anti-seepage</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水工建筑物"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#湿地">
     <dc:source>Ontology Engineer ingGroup</dc:source>
@@ -308,10 +336,11 @@ SUMO</dc:source>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#心墙">
-    <rdfs:label xml:lang="亦称">core wall</rdfs:label>
     <rdfs:label xml:lang="注释">设在土坝中间或稍偏上游的防渗体。按所用材料，分土心墙、沥青混凝土心墙、混凝土心墙和钢筋混凝土心墙等。应具有适应变形的性能，以防裂缝产生。施工时要严格保证质量，通常其顶部应高出上游水位，底部应伸入地基不透水层，或保证与截水墙有良好的连接。为改善坝体应力状态，避免裂缝，近代的高土石坝常修建成稍偏上游的斜心墙形式。混凝土和钢筋混凝土等刚性心墙在高土石坝中应用甚少。
         
         </rdfs:label>
+    <rdfs:label xml:lang="亦称">core wall</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#土坝"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#省份">
     <rdfs:subClassOf>
@@ -320,18 +349,27 @@ SUMO</dc:source>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#降水量">
     <rdfs:label xml:lang="注释">一定时段内，降落到地面上的雨、雪、雹以及水汽凝结物露、霜的总量。一般以降水深度表示，固态水应化为液态水计，单位为mm。按时段不同，有以降水起止时间计算的一次降水量;以日、月及年计算的日降水量、月降水量及年降水量。如仅针对降水中的雨水，则称“降雨量”。受东南和西南季风影响，中国多年平均降水量呈东南多，西北少的特点。华南地区为1500〖KG-1.3mm〗～2000mm，西北大部分地区则不足100mm。</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#降水"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#县">
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#市"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水工建筑物">
-    <rdfs:label xml:lang="亦称">hydraulic structure</rdfs:label>
     <rdfs:label xml:lang="注释">水利工程中与水发生相互作用的各类建筑物的统称。按其功用大致可分： (1) 挡水建筑物，如闸、坝、堤、海塘等;(2) 泄水建筑物，如溢洪道、泄洪隧洞等;(3) 取水建筑物，如进水塔、进水闸等;(4) 输水建筑物，如渠道、输水隧洞、管道等;(5) 整治建筑物，如丁坝、顺坝等;(6) 专门性建筑物，如水电站和抽水站的厂房、船闸和升船机、防波堤和码头、鱼道、筏道、给水过滤池等。这些建筑物需承受水的各种作用，如静水压力、动水压力、渗流压力和水流冲刷等。
         
         </rdfs:label>
+    <rdfs:label xml:lang="亦称">hydraulic structure</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#防洪抗旱"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#淡水湖">
     <rdfs:label xml:lang="注释">水的含盐度小于1%的湖泊。因湖水不断交换，水中盐分不易聚集。湿润地区的排水湖均属之，如中国长江沿岸的鄱阳湖、洞庭湖等。中国淡水湖的贮水量为2150亿m3。</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#湖泊"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利政务信息">
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利信息化"/>
@@ -344,15 +382,18 @@ SUMO</dc:source>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#雨量">
+    <rdfs:label xml:lang="注释">一定时段内，降落到地面上的雨水深度。通常用雨量器测定，单位为mm。中国雨量分布不均匀，自东南向西北逐渐减少。长江以南大部地区，年雨量超过1400mm，3—6月(或4—7月)为多雨季，最大四个月雨量占全年50%〖KG-1.3mm〗～60%;西南、华北、东北大部地区，年雨量为400〖KG-1.3mm〗～1000mm，6—9月为多雨季，最大四个月雨量占全年70%〖KG-1.3mm〗～80%;西北大部地区年雨量为100〖KG-1.3mm〗～400mm，四季分布一般比较均匀。</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#雨量器"/>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#降水量"/>
-    <rdfs:label xml:lang="注释">一定时段内，降落到地面上的雨水深度。通常用雨量器测定，单位为mm。中国雨量分布不均匀，自东南向西北逐渐减少。长江以南大部地区，年雨量超过1400mm，3—6月(或4—7月)为多雨季，最大四个月雨量占全年50%〖KG-1.3mm〗～60%;西南、华北、东北大部地区，年雨量为400〖KG-1.3mm〗～1000mm，6—9月为多雨季，最大四个月雨量占全年70%〖KG-1.3mm〗～80%;西北大部地区年雨量为100〖KG-1.3mm〗～400mm，四季分布一般比较均匀。</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#土壤水">
-    <rdfs:label xml:lang="亦称">soil water</rdfs:label>
     <rdfs:label xml:lang="注释">土壤中所存在和保持的水分。常以气态(水蒸气)、液态(水)或固态(冰)存在。液态水可分吸湿水、薄膜水、毛管水和重力水四种类型。与大气圈有密切联系，从大气降水和水汽凝结得到补给，消耗于蒸发和植物的散发(蒸腾)。不同类型的土壤水分被植物吸收利用的程度不同。在水文学中，土壤水的多少与下渗和径流的形成有密切关系。
         
         </rdfs:label>
+    <rdfs:label xml:lang="亦称">soil water</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地质"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地质">
     <rdfs:label xml:lang="注释">二级概念</rdfs:label>
@@ -365,6 +406,9 @@ SUMO</dc:source>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#海塘">
     <rdfs:label xml:lang="注释">(1) 亦称“捍海塘”、“捍海堰”、“陡墙式海堤”。沿海岸与河口以块石或条石等砌筑成陡墙形式的挡潮、防浪的堤。是中国东南沿海地带的重要屏障。从长江南岸江苏常熟到上海沿海一带称“江南海塘”;浙江钱塘江口及杭州湾两岸，北至上海金山卫，南至曹娥江口称“浙江海塘”或“钱塘江海塘”。始建于汉代，历经唐、宋、元、明、清，屡经增修、扩展、改筑，塘址因海岸的涨坍而时有移动。(2) 隋开皇中修筑的工程。故址在今江苏连云港东云台山麓。(3) 一名“常丰堰”，唐大历中淮南节度使判官李承主持兴筑的工程。故址在今江苏盐城、东台的串场河东岸。即范公堤中段的前身。</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#防洪抗旱"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水资源">
     <rdfs:label xml:lang="注释">广义指地球系统中储存的所有的气态、液态和固态天然水;狭义指人类可作为资源利用的水，即逐年可以通过地球系统水文循环回复和更新的淡水，包括河川径流和浅层地下水等。通常以年为周期计算水资源量。狭义的“水资源”亦仅指水量资源;广义的“水资源”则包括水量、水质和水能资源。由于受地域和季节变化的影响，水资源的时空分布差异很大。淡水资源为人类生活和生产所不可或缺，是社会可持续发展的重要战略性资源，必须十分珍惜利用和保护。</rdfs:label>
@@ -374,6 +418,7 @@ SUMO</dc:source>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河源">
     <rdfs:label xml:lang="注释">河流最初具有地面水流的地方。亦即河流开始的处所。通常是溪涧、泉水、冰川、雪线、沼泽或湖泊。世界上大河的河源，多是沼泽或湖泊(湖泊群)。在河流溯源侵蚀作用下，河源可不断向上移动或变动位置。</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#农业水利">
     <dc:source>水利大辞典</dc:source>
@@ -406,10 +451,11 @@ SUMO</dc:source>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利史"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#灌区">
-    <rdfs:label xml:lang="亦称">irrigation district</rdfs:label>
     <rdfs:label xml:lang="注释">一个灌溉系统所控制的土地范围。包括灌溉面积和非灌溉面积两部分。根据灌溉面积的大小，可划分为大型灌区(大于20000hm2)、中型灌区(666.7〖KG-1.3mm〗～20000hm2)和小型灌区(小于666.7hm2)三类。按灌溉水源，分利用地表水的渠灌区、利用地下水的井灌区和井渠结合灌区。按取水方式，分自流灌区和提水灌区。
         
         </rdfs:label>
+    <rdfs:label xml:lang="亦称">irrigation district</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#农业水利"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#盐池">
     <dc:source>Ontology Engineer ingGroup</dc:source>
@@ -430,6 +476,19 @@ SUMO</dc:source>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#湖泊">
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水系"/>
     <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地区"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#位于"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <dc:source>SUMO</dc:source>
+    <dc:creator>zjyan</dc:creator>
+    <dc:source>Ontology Engineer ingGroup</dc:source>
+    <rdfs:subClassOf>
       <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
           <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#内陆水"/>
@@ -448,28 +507,15 @@ SUMO</dc:source>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:someValuesFrom>
-          <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地区"/>
-        </owl:someValuesFrom>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#位于"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <dc:source>SUMO</dc:source>
-    <dc:creator>zjyan</dc:creator>
-    <dc:source>Ontology Engineer ingGroup</dc:source>
     <rdfs:label xml:lang="注释">大陆上的天然洼地蓄(积)水而成的停滞或流动缓慢的水体。按成因，分构造湖、火口湖、冰川湖、堰塞湖、喀斯特湖、潟湖、人工湖等;按是否泄水，分排水湖和非排水湖;按是否有径流入海，分内陆湖和外流湖;按含盐度高低，分淡水湖或咸水湖。具有调蓄水量、提供饮水、灌溉、航运、养殖等功能。</rdfs:label>
     <dc:source>百度百科</dc:source>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#落差">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水位"/>
-    <rdfs:label xml:lang="亦称">fall</rdfs:label>
     <rdfs:label xml:lang="注释">按同一基准面同时测得的河道(段)上、下两断面之间的水位差。单位以m计。河源与河口间的落差称“总落差”。河段两端的河底高程差或最低水位差，表征单位质量水体具有的水能，是估算该段河流水能蕴藏量的最主要参数之一。在重力作用下河水不断向下游流动，因克服流动阻力、冲蚀河床，使水能分散地消耗掉。水力发电的任务，就是采取适当工程措施，将这些被无益消耗掉的水能转化为人们需要的电能。河道某一河段比降陡，即单位长度河段落差大，有利于筑坝壅高水头，或有利于用较短的引水道集中较大落差。
         
         </rdfs:label>
+    <rdfs:label xml:lang="亦称">fall</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水位"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水闸">
     <rdfs:label xml:lang="注释">建筑在渠道或河道上的一种低水头挡水、泄水建筑物。由上游连接段、闸室、下游连接段组成。闸室为主体部分，其中设有闸门，用以调节水位、控制过闸流量。上游连接段包括铺盖、防冲槽、上游翼墙、护坡等，具有防冲、防渗、引导水流平顺入闸的作用。下游连接段包括消力池、海漫、防冲槽、下游翼墙、护坡等，以消减水流能量、保护河床和两岸。水利工程中，水闸应用甚广。按所担负任务，分进水闸、节制闸、排水闸、退水闸、挡潮闸、分水闸、分洪闸、冲沙闸等;按结构形式，分开敞式水闸和封闭式水闸。也有按施工方法或结构形状等分类的，如装配式水闸、浮运式水闸、桩基式水闸、浮体闸等。
@@ -487,6 +533,7 @@ SUMO</dc:source>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利">
     <rdfs:label xml:lang="注释">人类采取各种措施对自然界的水进行控制、调节、治导、利用、管理和保护，以减轻或免除水旱灾害，并开发利用水资源，适应生产生活和改善生态环境需要的活动。“水利”一词，在中国最早见于《吕氏春秋·孝行览·慎人》(约公元前239年)：“以其徒属掘地财，取水利，编蒲苇，结罘网，手足胼胝不居，然后免于冻馁之患。”西汉武帝时，史学家司马迁(约前145或前135—?)在被誉为中国第一部水利通史的《史记·河渠书》中写道：“甚哉，水之为利害也。”从此在中国奠定了“水利”一词包含的兴利除害的完整概念，沿用至今。中国古代的水利以防洪、农业灌溉和漕运最为重要。当代中国，水利包含的内容，除防洪、灌溉和航运，还包含水力发电、治涝治碱、水土保持、城镇供水、人畜饮水、水污染控制、水生态保护等内容。欧美国家没有与“水利”一词恰当的对应词汇，一般根据不同场合使用hydraulic engingeering，或用water conservancy， 或用water resources。</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利术语"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水力发电">
     <dc:source>水利大辞典</dc:source>
@@ -520,17 +567,21 @@ SUMO</dc:source>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#闸门">
-    <rdfs:label xml:lang="亦称">gate</rdfs:label>
     <rdfs:label xml:lang="注释">闸室的组成部分之一。装置在闸墩上可启闭以控制闸孔水流的挡水结构。一般由挡水面板、传力结构(梁系、支架等)、可动部件(滚轮、支铰等)、止水和附件等组成。挡水面板可用钢、木、钢筋混凝土、钢丝网水泥砂浆等材料制作。按面板形式，分平面闸门、弧形闸门、波浪形面板闸门、折板式面板闸门、双曲扁壳闸门、圆柱壳体弧形闸门、三角形闸门和叠梁式闸门等。按工作条件，分工作闸门(主闸门)、检修闸门等。按启闭方式，分直升式、横拉式、升卧式、下卧式、立轴旋转式、横轴旋转式等。
         
         </rdfs:label>
+    <rdfs:label xml:lang="亦称">gate</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水闸"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水尺">
     <rdfs:label xml:lang="注释">测量江、河、湖泊或其他水体水面高程的装置。有直接观读式和间接量计式两种。前者是将有刻度的搪瓷水尺，固定在河边的木桩、钢筋混凝土桩、桥墩、堤坝上，或者在河边石壁上刻划水尺。后者先用绳、钢索或链，从已知高程的固定点向下量至水面，求得垂直距离，然后计算出水位值。</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#防洪抗旱"/>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#径流">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#土壤水"/>
     <rdfs:label xml:lang="注释">陆地上接受的降水形成的从地面或地下汇集到河槽而下泄的水流。一般分地面径流、壤中径流和地下径流。一年内经流域出口断面流出的全部水量，称“年径流量”;一月内的称“月径流量”;一次降雨形成的称“次径流量”。通常以立方米或毫米(径流深)计。闭合流域的多年平均径流量(R0)等于该流域的多年平均降水量(P0)减去多年平均蒸散发量(E0)，即R0＝P0-E0。径流引起江河、湖泊水情的变化。中国年径流量的分布规律基本上与年降水量相同：　地区分布不均匀、季节和年际变化大。按年径流的地区分布可划分为：　(1) 丰水带： 年径流系数大于0.5，年径流深大于1000mm;(2)　多水带，年径流系数为0.3〖KG-1.3mm〗～0.5，年径流深300〖KG-1.3mm〗～1000mm;(3)　过渡带，年径流系数为0.1〖KG-1.3mm〗～0.3，年径流深50〖KG-1.3mm〗～300mm;(4)　少水带，年径流系数小于0.1，年径流深10〖KG-1.3mm〗～50mm;(5)　干涸带，年径流深不足10mm。</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#土壤水"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水电站">
     <dc:source>智源水利数据集</dc:source>
@@ -557,6 +608,7 @@ SUMO</dc:source>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#分水线">
     <rdfs:label xml:lang="注释">山峰、山脊、鞍部等地形最高点的连线。其两侧降水形成的径流分别向两侧河流汇集。有地面分水线和地下分水线之分。地面分水线一般由带有等高线的地形图确定，地下水分水线则需通过水文地质勘探确定。地面分水线为相邻流域的分界线。</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地质"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水域">
     <dc:source>Ontology Engineer ingGroup</dc:source>
@@ -565,6 +617,7 @@ SUMO</dc:source>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#径流量">
     <rdfs:label xml:lang="注释">一定时段内从河流过水断面通过的水量。以m3为单位，或用平铺在集水区上的水深表示，以mm为单位，后者亦称“径流深”。时段长一般取年、月或一次洪水历时，相应的径流量分别称“年径流量”、“月径流量”和“次洪径流量”。</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地面径流"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#组织">
     <rdfs:subClassOf>
@@ -585,6 +638,7 @@ SUMO</dc:source>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流量">
     <rdfs:label xml:lang="注释">单位时间内通过过水断面的水量。等于过水断面平均流速与相应过水断面面积的乘积。常用单位为m3/s。</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#城市水利">
     <dc:source>水利大辞典</dc:source>
@@ -601,19 +655,19 @@ SUMO</dc:source>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#春汛">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#雪"/>
     <rdfs:label xml:lang="注释">亦称“桃汛”。中、高纬度地区，春季流域内季节性积雪融化、河冰解冻或春雨，引起河水上涨的现象。中国北方常发生在清明至立夏前后桃花盛开的时期，故称“桃花汛”或“桃汛”。中国旧时“桃汛”专指黄河上游因融雪而暴发的洪水，易于成灾。在中国南方，由于这段时期冷暖气流交替，常致淫雨霏霏，乃至暴雨，使江河水位急剧上涨，可能形成局部灾害。</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#洪水">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#径流量"/>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#台风雨"/>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#气旋雨"/>
-    </rdfs:subClassOf>
-    <rdfs:label xml:lang="亦称">flood</rdfs:label>
     <rdfs:label xml:lang="注释">流域内由于集中大暴雨，大面积、历时长的大量降雨或不寻常的融雪而汇入河道的径流。中国河流洪水主要由降雨形成。平常年份的洪水为一般洪水，常年少见的洪水称“大洪水”，历史上罕见的几十年或百年以上一遇的洪水称“特大洪水”。洪水超过河道泄流能力，会泛滥成灾，必须采取防洪措施。
         
         </rdfs:label>
+    <rdfs:label xml:lang="亦称">flood</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#气旋雨"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#径流量"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#台风雨"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地表水">
     <dc:source>Ontology Engineer ingGroup</dc:source>
@@ -621,17 +675,18 @@ SUMO</dc:source>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#内陆水"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#尾水管">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水轮机"/>
-    <rdfs:label xml:lang="亦称">draft tube</rdfs:label>
     <rdfs:label xml:lang="注释">反击式水轮机的泄水部件。为转轮出口的扩散管道。其功用有： 将转轮出口水流泄向下游，当吸出高度大于零时，利用转轮至下游水位之间这一高度的位置势能，回收利用转轮出口的部分动能。回收利用转轮出口水流动能的能力以动能恢复系数表示，此系数越大，水轮机效率越高。按外形，分直锥形、弯锥形和弯肘形。前两者用于小型水轮机，后者用于大中型水轮机。
         
         </rdfs:label>
+    <rdfs:label xml:lang="亦称">draft tube</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水轮机"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#电力系统">
-    <rdfs:label xml:lang="亦称">electric power system</rdfs:label>
     <rdfs:label xml:lang="注释">发电厂(指发电机和配电装置)、电力网、电力用户三者构成的总体。是动力系统的一部分。由于电能的生产、输送和使用必须同时完成，任一时刻的电能都必须保持平衡，而用户的电力消耗(即负荷)却在不断变化，故发电、输电、用电的各电气元件在生产过程中必须结合成整体，紧密联系，统一调度，以保证供电的可靠性和经济性。
         
         </rdfs:label>
+    <rdfs:label xml:lang="亦称">electric power system</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水力发电"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#防洪抗旱">
     <dc:source>水利大辞典</dc:source>
@@ -639,12 +694,13 @@ SUMO</dc:source>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#水利水电工程"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#人工湖">
-    <rdfs:label xml:lang="亦称"> reservoir</rdfs:label>
-    <rdfs:label xml:lang="亦称"> man lake</rdfs:label>
-    <rdfs:label xml:lang="亦称">artificial lake</rdfs:label>
     <rdfs:label xml:lang="注释">即“水库”(4页)。
         
         </rdfs:label>
+    <rdfs:label xml:lang="亦称">artificial lake</rdfs:label>
+    <rdfs:label xml:lang="亦称"> reservoir</rdfs:label>
+    <rdfs:label xml:lang="亦称"> man lake</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#湖泊"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#流域">
     <rdfs:label xml:lang="注释">地面分水线所包围的集水区。流域内产生的地面径流将汇入其中河流，并经出口断面流出流域。其大小、形状、长度、宽度、起伏等对流域水文情势有密切的影响。地面分水线与地下分水线重合的流域称“闭合流域”，否则称“不闭合流域”。一般大中流域，因地面与地下分水线不重合而发生的相邻流域水量交换，比流域总水量小得多，常可忽略不计，可视作“闭合流域”;喀斯特地区的流域，地下水量交换则相当大，一般为“不闭合流域”。</rdfs:label>
@@ -667,7 +723,7 @@ SUMO</dc:source>
     <dc:source>百度百科</dc:source>
     <dc:source>水利大辞典</dc:source>
     <dc:creator>zjyan</dc:creator>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#河流"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#湖泊"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#喷泉">
     <dc:source>Ontology Engineer ingGroup</dc:source>
@@ -678,9 +734,11 @@ SUMO</dc:source>
     <rdfs:label xml:lang="注释">气旋或低压过境带来的降雨。分非锋面雨和锋面雨两种。前者是由于气旋向低压区辐合引起气流上升，
 使其中所含水汽冷却凝结所致。后者又分暖锋雨和冷锋雨。暖锋雨是由于冷暖气团相遇时，暖气团爬在冷气团上面，使湿热空气中所含水汽冷却凝结而形成，降落范围较大，降雨强度小，历时长;冷锋雨是由于冷暖空气相遇时，冷气团迫使暖气团抬升，使湿热空气中所含水汽冷却凝结而形成，降落范围较小，降雨强度大、历时短。中国大部分地区位于温带，南北气流交汇频繁，导致气旋雨多发，占全年总雨量的60%〖KG-1.3mm〗～80%，甚至更高。是造成中国河流洪水的一种主要降雨类型。
 </rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#大气水"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#降水">
     <rdfs:label xml:lang="注释">指大气降水。从空中降落至地面的液态水和固态水。主要有雨、雪、霰、冰雹等。湿空气上升，与冷空气相遇，相对湿度不断增大，直到水汽饱和，在悬浮于空中的气溶胶微粒上凝结成云，当水汽略过饱和时，云滴继续增大，便能通过云层下降而不被蒸发掉，成为降水。湿空气上升的外力来自锋面或气旋运动、热力对流、地形抬升等。按照起主导作用的外力，分气旋雨(锋面雨)、对流雨、地形雨、台风雨等。</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#大气水"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#地下水">
     <dc:source>Ontology Engineer ingGroup</dc:source>
@@ -688,8 +746,9 @@ SUMO</dc:source>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#内陆水"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#雷雨">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#暴雨"/>
     <rdfs:label xml:lang="注释">伴有闪电和雷声的降水现象。成因很复杂，但多因积雨云受不稳定气流的作用，产生猛烈上升运动而形成。常见的有：　(1)　热雷雨，范围小，历时短，常见于夏季，多因气流受热不均匀而引起强烈的对流所致;(2)　锋面雷雨，范围大，历时长，因冷、暖气流交绥形成锋面，促使暖湿空气剧烈上升运动而产生;(3)　地形雷雨，限于一些山区的迎风面，当暖湿气流流经时被迫抬升，遇到冷空气侵袭而形成。强烈的雷雨可达暴雨程度，有可能形成灾害。</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#暴雨"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#大气水"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.semanticweb.org/jeffery/ontologies/2021/5/hydro-ontology.owl#淡水">
     <rdfs:label xml:lang="注释">含盐量或矿化度小于1g/L的水。地球系统中的淡水约占地球总水量的2.5%。主要分布在冰川和江河、湖泊(水库)、浅层地下含水层中。其中江河水、湖泊(水库)水、浅层地下水等是人类所需水资源的主要来源。</rdfs:label>
@@ -777,175 +836,509 @@ SUMO</dc:source>
     </rdfs:domain>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </owl:TransitiveProperty>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#钱镠"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#徐伯"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#世界水协会"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国水力发电工程学会"/>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#钱镠">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#徐伯">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#世界水协会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国水力发电工程学会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
   <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#天津水运工程科学研究院"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#林秉南"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#谢才"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#钱宁"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#禹"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#泰勒"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#邓艾"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#共工"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#郏亶"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际灌溉排水委员会"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#俄罗斯科学院水问题研究所"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水资源与水电工程科学国家重点实验室"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际小水电中心"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国水运建设行业协会"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#桓温"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国水利水电科学研究院"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#美国水和能源服务部"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#贾让"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#郑国"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#施嘉炀"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#黄万里"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国农业节水和农村供水技术协会"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#禹贡"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#召信臣"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#张含英"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#孙叔敖"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#左东启"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#易家训"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#河口海岸学国家重点实验室"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#伍子胥"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#韦杰涅耶夫"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#陈登"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#冯·卡门"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#张书农"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#法国地球物理及工业流体动力学实验室"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#陈潢"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#雷志栋"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#山区河流开发保护国家重点实验室"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#马钧"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#印度中央水利电力研究站"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#潘家铮"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际水资源协会"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#贾鲁"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#汪胡桢"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国水利工程协会"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#张戎"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#长江水利科学研究院"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#沈珠江"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#宇文恺"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#亚太地区小水电研究培训中心"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际大坝委员会"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#巴甫洛夫斯基"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#普朗特"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#世界水理事会"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#徐乾清"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#李冰"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#谢家泽"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#靳辅"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#意大利结构模型研究所"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#李鹗鼎"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#侯叔献"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#范仲淹"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#王景"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国家工程技术研究中心"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水沙科学与水利水电工程国家重点实验室"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#高镜莹"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#管子"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#兒宽"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#杜预"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#恩格司"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水资源高效利用与工程安全国家工程研究中心"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国水利学会"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#英国水力研究中心"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#斯托克斯"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水利科技"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际水教育学院"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#丹尼尔·伯努利"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#王延世"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#杜诗"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际航运协会"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水文水资源与水利工程科学国家重点实验室"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国家工程研究中心"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#华士乾"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#张昌龄"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#疏浚技术装备国家工程研究中心"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国海洋工程学会"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#王鹤亭"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国海洋湖沼学会"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#张蔚榛"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国水利经济研究会"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#李仪祉"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国环境科学学会"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#伍正诚"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#张瑞瑾"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#太沙基"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水利学科"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#郭守敬"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#海岸和近海工程国家重点实验室"/>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#天津水运工程科学研究院">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#林秉南">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#谢才">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#钱宁">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#禹">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#泰勒">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#邓艾">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#共工">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#郏亶">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际灌溉排水委员会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#俄罗斯科学院水问题研究所">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水资源与水电工程科学国家重点实验室">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际小水电中心">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国水运建设行业协会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#桓温">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国水利水电科学研究院">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#美国水和能源服务部">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#贾让">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#郑国">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#施嘉炀">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#黄万里">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国农业节水和农村供水技术协会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#禹贡">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#召信臣">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#张含英">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#孙叔敖">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#左东启">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#易家训">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#河口海岸学国家重点实验室">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#伍子胥">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#韦杰涅耶夫">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#陈登">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#冯·卡门">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#张书农">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#法国地球物理及工业流体动力学实验室">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#陈潢">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#雷志栋">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#山区河流开发保护国家重点实验室">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#马钧">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#印度中央水利电力研究站">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#潘家铮">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际水资源协会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#贾鲁">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#汪胡桢">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国水利工程协会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#张戎">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#长江水利科学研究院">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#沈珠江">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#宇文恺">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#亚太地区小水电研究培训中心">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际大坝委员会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#巴甫洛夫斯基">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#普朗特">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#世界水理事会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#徐乾清">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#李冰">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#谢家泽">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#靳辅">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#意大利结构模型研究所">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#李鹗鼎">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#侯叔献">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#范仲淹">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#王景">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国家工程技术研究中心">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水沙科学与水利水电工程国家重点实验室">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#高镜莹">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#管子">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#兒宽">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#杜预">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#恩格司">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水资源高效利用与工程安全国家工程研究中心">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国水利学会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#英国水力研究中心">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#斯托克斯">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水利科技">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际水教育学院">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#丹尼尔·伯努利">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#王延世">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#杜诗">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际航运协会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水文水资源与水利工程科学国家重点实验室">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国家工程研究中心">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#华士乾">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#张昌龄">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#疏浚技术装备国家工程研究中心">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国海洋工程学会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#王鹤亭">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国海洋湖沼学会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#张蔚榛">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国水利经济研究会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#李仪祉">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国环境科学学会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#伍正诚">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#张瑞瑾">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#太沙基">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水利学科">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#郭守敬">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#海岸和近海工程国家重点实验室">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
   <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#美国地球物理联合会"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#林一山"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#徐芝纶"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#夏原吉"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#姜师度"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#黄河水利科学研究院"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际水文计划"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#崔宗培"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#李赋都"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#监禄"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#潘镒芬"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#德国卡尔斯鲁尔联邦水工研究所"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#欧拉"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#世界气象组织"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#郑肇经"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#周文德"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国家工程实验室"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#日本港湾空港技术研究所"/>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#美国地球物理联合会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#林一山">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#徐芝纶">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#夏原吉">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#姜师度">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#黄河水利科学研究院">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际水文计划">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#崔宗培">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#李赋都">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#监禄">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#潘镒芬">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#德国卡尔斯鲁尔联邦水工研究所">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#欧拉">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#世界气象组织">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#郑肇经">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#周文德">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国家工程实验室">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#日本港湾空港技术研究所">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
   <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#王三一"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#赵人俊"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#潘季驯"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#米勒"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#须恺"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#沙玉清"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#窦国仁"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#雷诺"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#港口水工建筑技术国家工程实验室"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#萨凡奇"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#珠江水利科学研究院"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#拉格朗日"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#徐光启"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际水文科学协会"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#流域水循环模拟与调控国家重点实验室"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#陈志恺"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#刘光文"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国航海学会"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#考斯加可夫"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#马臻"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#荷兰代尔夫特水力研究所"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#傅汝德"/>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#王三一">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#赵人俊">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#潘季驯">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#米勒">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#须恺">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#沙玉清">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#窦国仁">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#雷诺">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#港口水工建筑技术国家工程实验室">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#萨凡奇">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#珠江水利科学研究院">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#拉格朗日">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#徐光启">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际水文科学协会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#流域水循环模拟与调控国家重点实验室">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#陈志恺">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#刘光文">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国航海学会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#考斯加可夫">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#马臻">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#荷兰代尔夫特水力研究所">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#傅汝德">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
   <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#丹麦水力研究所"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#全球水伙伴"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#西门豹"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#鲧"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#谢鉴衡"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#王化云"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国家大坝安全工程技术研究中心"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#黄文熙"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国水土保持学会"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#沈括"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#美国陆军工程兵团"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#美国田纳西河流域管理局"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#达西"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水工程生态研究所"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#泰西"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#费理门"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#陈明致"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#南京水利科学研究院"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国家重点实验室"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#张光斗"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水利工程仿真与安全国家重点实验室"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#严恺"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际水利与环境工程学会"/>
-  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#欧洲地球科学联合会"/>
-  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#顾兆勋"/>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#丹麦水力研究所">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#全球水伙伴">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#西门豹">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#鲧">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#谢鉴衡">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#王化云">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国家大坝安全工程技术研究中心">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#黄文熙">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#中国水土保持学会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#沈括">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#美国陆军工程兵团">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#美国田纳西河流域管理局">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#达西">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水工程生态研究所">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#泰西">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#费理门">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#陈明致">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#南京水利科学研究院">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国家重点实验室">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#张光斗">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#水利工程仿真与安全国家重点实验室">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#严恺">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#国际水利与环境工程学会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <组织 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#欧洲地球科学联合会">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </组织>
+  <人物 rdf:about="http://www.xidian.edu.cn/owl/ontologies/zjyan#顾兆勋">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </人物>
 </rdf:RDF>
